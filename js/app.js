@@ -29,9 +29,15 @@ const reloj = () => {
   } del ${fecha.getFullYear()}`;
 
   const hora = document.querySelector(".fs-4");
-  hora.textContent = `${String(fecha.getHours()).padStart(2, "0")}:${String(
-    fecha.getMinutes()
-  ).padStart(2, "0")}:${String(fecha.getSeconds()).padStart(2, "0")}`;
+  if (fecha.getHours() >= 0 && fecha.getHours() < 12) {
+    hora.textContent = `${String(fecha.getHours()).padStart(2, "0")}:${String(
+      fecha.getMinutes()
+    ).padStart(2, "0")}:${String(fecha.getSeconds()).padStart(2, "0")} AM`;
+  } else {
+    hora.textContent = `${String(fecha.getHours()).padStart(2, "0")}:${String(
+      fecha.getMinutes()
+    ).padStart(2, "0")}:${String(fecha.getSeconds()).padStart(2, "0")} PgitM`;
+  }
 };
 
 setInterval(reloj, 1000);
