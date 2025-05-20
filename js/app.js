@@ -36,7 +36,7 @@ const reloj = () => {
   } else {
     hora.textContent = `${String(fecha.getHours()).padStart(2, "0")}:${String(
       fecha.getMinutes()
-    ).padStart(2, "0")}:${String(fecha.getSeconds()).padStart(2, "0")} PgitM`;
+    ).padStart(2, "0")}:${String(fecha.getSeconds()).padStart(2, "0")} PM`;
   }
 };
 
